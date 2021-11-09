@@ -1,0 +1,68 @@
+<div class="outer">
+
+  <form class="example-form" [formGroup]="signUpForm">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>First Name</mat-label>
+      <input type="text" matInput formControlName="fname"
+             >
+
+      <mat-error *ngIf="signUpForm.get('fname')?.touched && signUpForm.get('fname')?.invalid">
+        Please enter a valid Name
+      </mat-error>
+
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Last Name</mat-label>
+      <input type="text" matInput formControlName="lname"
+      >
+
+      <mat-error *ngIf="signUpForm.get('lname')?.touched && signUpForm.get('lname')?.invalid">
+        Please enter a valid Name
+      </mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email"
+             placeholder="Ex. pat@example.com">
+
+      <mat-error *ngIf="signUpForm.get('email')?.touched && signUpForm.get('email')?.invalid">
+        Please enter a valid Email address
+      </mat-error>
+
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password"
+             placeholder="......">
+
+      <mat-error *ngIf="signUpForm.get('password')?.touched && signUpForm.get('password')?.invalid">
+        Please enter a valid Password
+      </mat-error>
+
+    </mat-form-field>
+
+    <button  mat-raised-button class="sign-in-button" >Register</button>
+  </form>
+
+  <div class="button-wrap">
+    <div class="items">
+      <mat-icon>facebook</mat-icon>
+    </div>
+    <div class="items">
+      <mat-icon>facebook</mat-icon>
+    </div>
+    <div class="items">
+      <mat-icon>facebook</mat-icon>
+    </div>
+
+  </div>
+
+
+</div>
+
